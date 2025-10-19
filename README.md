@@ -3,7 +3,7 @@
 > **UWB(초광대역) 통신의 단일 주파수 채널에서 위상 오차를 제거하여, 기존 DS-TWR 방식의 거리 측정 오차를 1cm 이하로 개선한 고정밀 실시간 측위 시스템(RTLS)**
 
 [![Award](https://img.shields.io/badge/Award-전자파학회%20동상-orange)]()
-[![UWB](https://img.shields.io/badge/UWB-DW3000-blue)](https://www.qorvo.com/products/p/DW3000)
+[![UWB](https://img.shields.io/badge/UWB-DW3000-blue)](https://www.qvo.com/products/p/DW3000)
 [![MCU](https://img.shields.io/badge/MCU-nRF52840-green)](https://www.nordicsemi.com/products/nrf52840)
 [![Framework](https://img.shields.io/badge/Framework-ROS-lightgrey)](https://www.ros.org/)
 
@@ -13,7 +13,7 @@
 
 표준 UWB(초광대역) DS-TWR(Double-Sided Two-Way Ranging) 기술은 송수신기 간 위상 오차로 인해 수 cm 수준의 거리 측정 오차를 보이며, 이는 고정밀 위치 추적이 필요한 AR, 스마트 홈 등의 응용 분야에서 한계점으로 작용합니다.
 
-본 프로젝트는 이러한 한계를 극복하기 위해 **단일 주파수 채널** 환경에서 패킷 교환 시 발생하는 공통 위상 오차(Common Phase Offset)를 효과적으로 제거하는 알고리즘을 제안하고 구현했습니다. UWB 신호의 I/Q 데이터로부터 위상 정보를 복원하고 이를 거리 계산에 반영하여, 최종적으로 거리 측정 오차를 **1cm 이하**로 개선하는 데 성공했으며, 이를 통해 RTLS의 전반적인 정확도와 신뢰성을 획기적으로 향상시켰습니다.
+본 프로젝트는 이러한 한계를 극복하기 위해 **단일 주파수 채널** 환경에서 패킷 교환 시 발생하는 공통 위상 오차(Common Phase Offset)를 효과적으로 제거하는 알고리즘을 제안하고 구현했습니다. UWB 신호의 I/Q 데이터로부터 위상 정보를 복원하고 이를 거리 계산에 반영하여, 최종적으로 거리 측정 오차를 **1cm 이하**로 개선하는 데 성공했으며, 이를 통해 RTLS의 전반적인 정확도와 신뢰성을 획기적으로 향상시켰습니다. 특히, 이 프로젝트는 상용 UWB 장치에서 고정밀 거리 측정을 구현한 J. Ma 등의 연구에 큰 영감을 받았습니다.
 
 본 연구의 성과는 한국전자파학회논문지에 게재되었습니다.
 
@@ -80,7 +80,12 @@ $$
 
 ---
 
-## 5. 저자 정보
+## 5. 참고 문헌
+-   J. Ma, F. Zhang, B. Jin, C. Su, S. Li, Z. Wang, and J. Ni, “Push the limit of highly accurate ranging on commercial UWB devices,” in *Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies*, New York, NY, May 2024, pp. 1-27.
+
+---
+
+## 6. 저자 정보
 
 -   **저자**: 장윤석, 배윤수, 박효준, 정현우, 한수민
 -   **교신저자**: 장병준
