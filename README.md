@@ -6,7 +6,6 @@
 [![UWB](https://img.shields.io/badge/UWB-DW3000-blue)](https://www.qorvo.com/products/p/DW3000)
 [![MCU](https://img.shields.io/badge/MCU-nRF52840-green)](https://www.nordicsemi.com/products/nrf52840)
 [![Framework](https://img.shields.io/badge/Framework-ROS-lightgrey)](https://www.ros.org/)
-[![Publication](https://img.shields.io/badge/Publication-KIEES-_337-43B_)](https://www.jkiees.org/archive/view_article?pid=jkiees-36-8-749)
 
 ---
 
