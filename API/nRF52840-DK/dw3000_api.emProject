@@ -1,0 +1,391 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="dw3000_api" target="8" version="2">
+  <project Name="dw3000_api">
+    <configuration
+      Name="Common"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_keep_preprocessor_output="No"
+      arm_linker_heap_size="8192"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="8192"
+      arm_linker_variant="GNU"
+      arm_simulator_memory_simulation_parameter="RX 00000000,00100000,FFFFFFFF;RWX 20000000,00040000,CDCDCDCD"
+      arm_target_device_name="nRF52840_xxAA"
+      arm_target_interface_type="SWD"
+      build_quietly="No"
+      build_treat_warnings_as_errors="No"
+      c_additional_options=""
+      c_preprocessor_definitions="BOARD_PCA10056 ;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52840_XXAA;DEBUG"
+      c_user_include_directories="$(ProjectDir)/Source/config;$(ProjectDir)/Source/platform_nRF52840-DK;$(NordicSDKDir)/components;$(NordicSDKDir)/components/boards;$(NordicSDKDir)/components/drivers_nrf/nrf_soc_nosd;$(NordicSDKDir)/components/toolchain/cmsis/include;$(NordicSDKDir)/components/libraries/balloc;$(NordicSDKDir)/components/libraries/ringbuf;$(NordicSDKDir)/components/libraries/log;$(NordicSDKDir)/components/libraries/log/src;$(NordicSDKDir)/components/libraries/memobj;$(NordicSDKDir)/components/libraries/util;$(NordicSDKDir)/components/libraries/atomic;$(NordicSDKDir)/components/libraries/delay;$(NordicSDKDir)/components/libraries/experimental_section_vars;$(NordicSDKDir)/components/libraries/strerror;$(NordicSDKDir)/components/libraries/fifo;$(NordicSDKDir)/components/libraries/uart;$(NordicSDKDir)/components/libraries/bsp;$(NordicSDKDir)/components/libraries/button;$(NordicSDKDir)/components/toolchain/cmsis/include;$(NordicSDKDir)/modules/nrfx;$(NordicSDKDir)/modules/nrfx/hal;$(NordicSDKDir)/modules/nrfx/mdk;$(NordicSDKDir)/modules/nrfx/drivers/include;$(NordicSDKDir)/integration/nrfx;$(NordicSDKDir)/integration/nrfx/legacy;$(NordicSDKDir)/external/fprintf;../Src;../Src/examples/examples_info;../Src/examples/shared_data;../Src/decadriver;../Src/MAC_802_15_4;../Src/MAC_802_15_8;../Src/Shared_jang;../Src/urop_2;../Src/Shared_jang;../Src/urop_2/with_sts;../Src/urop_2/with_no_sts;../Src/urop_2/trim;../Src/urop_2/channel_switching;../Src/urop_2/cir_save;../Src/urop_2/single_frequency;../Src/urop_2/multi_frequency;"
+      debug_target_connection="J-Link"
+      gcc_all_warnings_command_line_options=""
+      gcc_c_language_standard="c11"
+      gcc_cplusplus_language_standard="c++11"
+      gcc_debugging_level="Level 3"
+      gcc_enable_all_warnings="No"
+      gcc_entry_point="Reset_Handler"
+      gcc_optimization_level="Level 0"
+      link_linker_script_file="Setup/SEGGER_Flash.icf"
+      linker_output_format="hex"
+      linker_printf_fmt_level="long"
+      linker_printf_fp_enabled="Double"
+      linker_printf_width_precision_supported="Yes"
+      linker_scanf_fmt_level="long"
+      linker_section_placement_file="$(ProjectDir)/flash_placement.xml"
+      linker_section_placement_macros="FLASH_PH_START=0x0 ;FLASH_PH_SIZE=0x100000;RAM_PH_START=0x20000000;RAM_PH_SIZE=0x40000;FLASH_START=0x0;FLASH_SIZE=0x100000;FCONFIG_START=0x10000;FCONFIG_SIZE=0x400;DEFAULT_CONFIG_START=0x10500;DEFAULT_CONFIG_SIZE=0x400;INIT_START=0x12000;RAM_START=0x20000000;RAM_SIZE=0x40000"
+      linker_section_placements_segments="FLASH RX 0x0 0x100000;RAM RWX 0x20000000 0x40000"
+      macros="NordicSDKDir=sdk;DW3000APIDir=../..;CMSIS_CONFIG_TOOL=$(NordicSDKDir)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard"
+      project_can_build_in_parallel="Yes"
+      project_directory=""
+      project_type="Executable"
+      use_compiler_driver="No" />
+    <folder Name="SEGGER">
+      <file file_name="SEGGER/SEGGER_RTT.c">
+        <configuration Name="Debug" build_exclude_from_build="No" />
+      </file>
+      <file file_name="SEGGER/SEGGER_RTT.h">
+        <configuration Name="Debug" build_exclude_from_build="No" />
+      </file>
+      <file file_name="SEGGER/SEGGER_RTT_Conf.h">
+        <configuration Name="Debug" build_exclude_from_build="No" />
+      </file>
+      <file file_name="SEGGER/SEGGER_RTT_Syscalls_SES.c">
+        <configuration Name="Debug" build_exclude_from_build="No" />
+      </file>
+    </folder>
+    <folder Name="Setup">
+      <file file_name="Setup/SEGGER_Flash.icf">
+        <configuration Name="Debug" build_exclude_from_build="No" />
+      </file>
+    </folder>
+    <folder Name="Source">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+      <folder Name="platform_nRF52840-DK">
+        <file file_name="Source/platform_nRF52840-DK/deca_mutex.c" />
+        <file file_name="Source/platform_nRF52840-DK/deca_sleep.c" />
+        <file file_name="Source/platform_nRF52840-DK/deca_spi.c" />
+        <file file_name="Source/platform_nRF52840-DK/deca_spi.h" />
+        <file file_name="Source/platform_nRF52840-DK/port.c" />
+        <file file_name="Source/platform_nRF52840-DK/port.h" />
+      </folder>
+      <configuration
+        Name="Debug"
+        c_user_include_directories=".;..\\platform_nRF52840-DK" />
+      <file file_name="Source/main.c" />
+      <folder Name="Shared_jang">
+        <file file_name="../Src/Shared_jang/shared_function_jang.c" />
+        <file file_name="../Src/Shared_jang/shared_function_jang.h" />
+      </folder>
+      <folder Name="urop_2">
+	<folder Name="with_sts">
+        	<file file_name="../Src/urop_2/with_sts/custom_ds_twr_initiator_with_sts.c" />
+		<file file_name="../Src/urop_2/with_sts/custom_ds_twr_responder_with_sts.c" />
+		<file file_name="../Src/urop_2/with_sts/custom_ds_twr_initiator_with_sts_2.c" />
+		<file file_name="../Src/urop_2/with_sts/custom_ds_twr_responder_with_sts_2.c" />
+	</folder>
+	<folder Name="with_no_sts">
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_initiator_with_no_sts_origin.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_responder_with_no_sts_origin.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_initiator_with_no_sts.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_responder_with_no_sts.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_initiator_with_no_sts_2.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_responder_with_no_sts_2.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_initiator_with_no_sts_3.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_responder_with_no_sts_3.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_initiator_with_no_sts_4.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_responder_with_no_sts_4.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_initiator_with_no_sts_5.c" />
+		<file file_name="../Src/urop_2/with_no_sts/custom_ds_twr_responder_with_no_sts_5.c" />
+	</folder>
+	<folder Name="trim">
+		<file file_name="../Src/urop_2/trim/custom_ds_twr_initiator_trim.c" />
+		<file file_name="../Src/urop_2/trim/custom_ds_twr_responder_trim.c" />
+	</folder>
+	<folder Name="channel_switching">
+		<file file_name="../Src/urop_2/channel_switching/custom_ds_twr_initiator_channel_switching.c" />
+		<file file_name="../Src/urop_2/channel_switching/custom_ds_twr_responder_channel_switching.c" />
+		<file file_name="../Src/urop_2/channel_switching/custom_ds_twr_responder_channel_switching_v2.c" />
+	</folder>
+	<folder Name="cir_save">
+		<file file_name="../Src/urop_2/cir_save/custom_ds_twr_initiator_cir.c" />
+		<file file_name="../Src/urop_2/cir_save/custom_ds_twr_responder_cir.c" />
+	</folder>
+	<folder Name="single_frequency_1vs1">
+		<file file_name="../Src/urop_2/single_frequency_1vs1/custom_ds_twr_initiator_single_frequency_1vs1.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs1/custom_ds_twr_responder_single_frequency_anchor_1vs1.c" />
+	</folder>
+	<folder Name="multi_frequency_1vs1">
+		<file file_name="../Src/urop_2/multi_frequency_1vs1/custom_ds_twr_initiator_multi_frequency_1vs1.c" />
+		<file file_name="../Src/urop_2/multi_frequency_1vs1/custom_ds_twr_responder_multi_frequency_anchor_1vs1.c" />
+	</folder>
+	<folder Name="single_frequency_1vs2">
+		<file file_name="../Src/urop_2/single_frequency_1vs2/custom_ds_twr_initiator_single_frequency_1vs2.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs2/custom_ds_twr_responder_single_frequency_anchor_1_1vs2.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs2/custom_ds_twr_responder_single_frequency_anchor_2_1vs2.c" />
+	</folder>
+	<folder Name="single_frequency_1vs3">
+		<file file_name="../Src/urop_2/single_frequency_1vs3/custom_ds_twr_initiator_single_frequency.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs3/custom_ds_twr_responder_single_frequency_anchor_1.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs3/custom_ds_twr_responder_single_frequency_anchor_2.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs3/custom_ds_twr_responder_single_frequency_anchor_3.c" />
+	</folder>
+	<folder Name="single_frequency_1vs4">
+		<file file_name="../Src/urop_2/single_frequency_1vs4/custom_ds_twr_initiator_single_frequency_1vs4.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4/custom_ds_twr_responder_single_frequency_anchor_1_1vs4.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4/custom_ds_twr_responder_single_frequency_anchor_2_1vs4.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4/custom_ds_twr_responder_single_frequency_anchor_3_1vs4.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4/custom_ds_twr_responder_single_frequency_anchor_4_1vs4.c" />
+	</folder>
+	<folder Name="single_frequency_1vs4_compare">
+		<file file_name="../Src/urop_2/single_frequency_1vs4_compare/custom_ds_twr_initiator_single_frequency_1vs4_compare.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4_compare/custom_ds_twr_responder_single_frequency_anchor_1_1vs4_compare.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4_compare/custom_ds_twr_responder_single_frequency_anchor_2_1vs4_compare.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4_compare/custom_ds_twr_responder_single_frequency_anchor_3_1vs4_compare.c" />
+		<file file_name="../Src/urop_2/single_frequency_1vs4_compare/custom_ds_twr_responder_single_frequency_anchor_4_1vs4_compare.c" />
+	</folder>
+	<folder Name="single_frequency_no_delay">
+		<file file_name="../Src/urop_2/single_frequency_no_delay/custom_ds_twr_initiator_single_frequency_no_delay.c" />
+		<file file_name="../Src/urop_2/single_frequency_no_delay/custom_ds_twr_responder_single_frequency_anchor_1_no_delay.c" />
+		<file file_name="../Src/urop_2/single_frequency_no_delay/custom_ds_twr_responder_single_frequency_anchor_2_no_delay.c" />
+		<file file_name="../Src/urop_2/single_frequency_no_delay/custom_ds_twr_responder_single_frequency_anchor_3_no_delay.c" />
+		<file file_name="../Src/urop_2/single_frequency_no_delay/custom_ds_twr_responder_single_frequency_anchor_4_no_delay.c" />
+	</folder>
+	<folder Name="multi_frequency">
+		<file file_name="../Src/urop_2/multi_frequency/custom_ds_twr_initiator_multi_frequency.c" />	
+		<file file_name="../Src/urop_2/multi_frequency/custom_ds_twr_responder_multi_frequency_anchor1.c" />
+		<file file_name="../Src/urop_2/multi_frequency/custom_ds_twr_responder_multi_frequency_anchor2.c" />
+	</folder>
+	<folder Name="multi_cir_data">
+		<file file_name="../Src/urop_2/multi_cir_data/custom_ds_twr_initiator_multi_cir_data.c" />	
+		<file file_name="../Src/urop_2/multi_cir_data/custom_ds_twr_responder_multi_cir_data.c" />
+	</folder>
+      </folder>
+      <folder Name="decadriver">
+        <file file_name="../Src/decadriver/deca_device.c" />
+      </folder>
+      <folder Name="examples">
+        <folder Name="custom_code">
+          <file file_name="../Src/custom_code/switching.c" />
+          <file file_name="../Src/custom_code/localization_ds_twr_initiatior.c" />
+          <file file_name="../Src/custom_code/localization_ds_twr_responder.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_tx.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_rx.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_tx_AI.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_rx_AI.c" />
+          <file file_name="../Src/custom_code/UART_test.c" />
+          <file file_name="../Src/custom_code/rx_diagnostics_cp.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_tx_txt.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_rx_txt.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_rx_two.c" />
+          <file file_name="../Src/custom_code/AoA_rtls_tx_two.c" />
+          <file file_name="../Src/custom_code/ds_twr_initiator_final.c" />
+          <file file_name="../Src/custom_code/ds_twr_responder_final.c" />
+          <file file_name="../Src/custom_code/ds_twr_responder_origin.c" />
+          <file file_name="../Src/custom_code/ds_twr_responder_packet_simulation.c" />
+          <file file_name="../Src/custom_code/ds_twr_initiator_packet_simulation.c" />
+          <file file_name="../Src/custom_code/ds_twr_initiator_origin.c" />
+        </folder>
+        <folder Name="ex_00a_reading_dev_id">
+          <file file_name="../Src/examples/ex_00a_reading_dev_id/read_dev_id.c" />
+        </folder>
+        <folder Name="ex_01a_simple_tx">
+          <file file_name="../Src/examples/ex_01a_simple_tx/simple_tx.c" />
+          <file file_name="../Src/examples/ex_01a_simple_tx/simple_tx_cp.c" />
+        </folder>
+        <folder Name="ex_02a_simple_rx">
+          <file file_name="../Src/examples/ex_02a_simple_rx/simple_rx.c" />
+          <file file_name="../Src/examples/ex_02a_simple_rx/simple_rx_cp.c" />
+        </folder>
+        <folder Name="ex_06a_ss_twr_initiator">
+          <file file_name="../Src/examples/ex_06a_ss_twr_initiator/ss_twr_initiator.c" />
+          <file file_name="../Src/examples/ex_06a_ss_twr_initiator/ss_twr_initiator_sts.c" />
+          <file file_name="../Src/examples/ex_06a_ss_twr_initiator/ss_twr_initiator_sts_no_data.c" />
+        </folder>
+        <folder Name="ex_06b_ss_twr_responder">
+          <file file_name="../Src/examples/ex_06b_ss_twr_responder/ss_twr_responder.c" />
+          <file file_name="../Src/examples/ex_06b_ss_twr_responder/ss_twr_responder_sts.c" />
+          <file file_name="../Src/examples/ex_06b_ss_twr_responder/ss_twr_responder_sts_no_data.c" />
+        </folder>
+        <folder Name="examples_info">
+          <file file_name="../Src/examples/examples_info/example_info.c" />
+        </folder>
+        <folder Name="shared_data">
+          <file file_name="../Src/examples/shared_data/shared_functions.c" />
+        </folder>
+        <folder Name="ex_01h_simple_tx_pdoa">
+          <file file_name="../Src/examples/ex_01h_simple_tx_pdoa/simple_tx_pdoa.c" />
+        </folder>
+        <folder Name="ex_02h_simple_rx_pdoa">
+          <file file_name="../Src/examples/ex_02h_simple_rx_pdoa/simple_rx_pdoa.c" />
+        </folder>
+        <folder Name="ex_04a_cont_wave">
+          <file file_name="../Src/examples/ex_04a_cont_wave/continuous_wave.c" />
+        </folder>
+        <folder Name="ex_04b_cont_frame">
+          <file file_name="../Src/examples/ex_04b_cont_frame/continuous_frame.c" />
+        </folder>
+        <folder Name="ex_07a_ack_data_tx">
+          <file file_name="../Src/examples/ex_07a_ack_data_tx/ack_data_tx.c" />
+        </folder>
+        <folder Name="ex_07b_ack_data_rx">
+          <file file_name="../Src/examples/ex_07b_ack_data_rx/ack_data_rx.c" />
+        </folder>
+        <folder Name="ex_13a_gpio">
+          <file file_name="../Src/examples/ex_13a_gpio/gpio_example.c" />
+        </folder>
+        <folder Name="ex_01d_tx_timed_sleep">
+          <file file_name="../Src/examples/ex_01d_tx_timed_sleep/tx_timed_sleep.c" />
+        </folder>
+        <folder Name="ex_03d_tx_wait_resp_interrupts">
+          <file file_name="../Src/examples/ex_03d_tx_wait_resp_interrupts/tx_wait_resp_int.c" />
+        </folder>
+        <folder Name="ex_03a_tx_wait_resp">
+          <file file_name="../Src/examples/ex_03a_tx_wait_resp/tx_wait_resp.c" />
+        </folder>
+        <folder Name="ex_03b_rx_send_resp">
+          <file file_name="../Src/examples/ex_03b_rx_send_resp/rx_send_resp.c" />
+        </folder>
+        <folder Name="ex_01b_tx_sleep">
+          <file file_name="../Src/examples/ex_01b_tx_sleep/tx_sleep.c" />
+          <file file_name="../Src/examples/ex_01b_tx_sleep/tx_sleep_idleRC.c" />
+        </folder>
+        <folder Name="ex_01c_tx_sleep_auto">
+          <file file_name="../Src/examples/ex_01c_tx_sleep_auto/tx_sleep_auto.c" />
+        </folder>
+        <folder Name="ex_01e_tx_with_cca">
+          <file file_name="../Src/examples/ex_01e_tx_with_cca/tx_with_cca.c" />
+        </folder>
+        <folder Name="ex_01g_simple_tx_sts_sdc">
+          <file file_name="../Src/examples/ex_01g_simple_tx_sts_sdc/simple_tx_sts_sdc.c" />
+        </folder>
+        <folder Name="ex_01i_simple_tx_aes">
+          <file file_name="../Src/examples/ex_01i_simple_tx_aes/simple_tx_aes.c" />
+        </folder>
+        <folder Name="ex_02c_rx_diagnostics">
+          <file file_name="../Src/examples/ex_02c_rx_diagnostics/rx_diagnostics.c" />
+        </folder>
+        <folder Name="ex_02d_rx_sniff">
+          <file file_name="../Src/examples/ex_02d_rx_sniff/rx_sniff.c" />
+        </folder>
+        <folder Name="ex_02f_rx_with_crystal_trim">
+          <file file_name="../Src/examples/ex_02f_rx_with_crystal_trim/rx_with_xtal_trim.c" />
+        </folder>
+        <folder Name="ex_02g_simple_rx_sts_sdc">
+          <file file_name="../Src/examples/ex_02g_simple_rx_sts_sdc/simple_rx_sts_sdc.c" />
+        </folder>
+        <folder Name="ex_02i_simple_rx_aes">
+          <file file_name="../Src/examples/ex_02i_simple_rx_aes/simple_rx_aes.c" />
+        </folder>
+        <folder Name="ex_05a_ds_twr_init">
+          <file file_name="../Src/examples/ex_05a_ds_twr_init/ds_twr_initiator.c" />
+          <file file_name="../Src/examples/ex_05a_ds_twr_init/ds_twr_initiator_cp.c" />
+          <file file_name="../Src/examples/ex_05a_ds_twr_init/ds_twr_initiator_sts.c" />
+        </folder>
+        <folder Name="ex_05b_ds_twr_resp">
+          <file file_name="../Src/examples/ex_05b_ds_twr_resp/ds_twr_responder.c" />
+          <file file_name="../Src/examples/ex_05b_ds_twr_resp/ds_twr_responder_cp.c" />
+          <file file_name="../Src/examples/ex_05b_ds_twr_resp/ds_twr_responder_sts.c" />
+        </folder>
+        <folder Name="ex_05c_ds_twr_init_sts_sdc">
+          <file file_name="../Src/examples/ex_05c_ds_twr_init_sts_sdc/ds_twr_sts_sdc_initiator.c" />
+        </folder>
+        <folder Name="ex_05d_ds_twr_resp_sts_sdc">
+          <file file_name="../Src/examples/ex_05d_ds_twr_resp_sts_sdc/ds_twr_sts_sdc_responder.c" />
+        </folder>
+        <folder Name="ex_06e_AES_ss_twr_initiator">
+          <file file_name="../Src/examples/ex_06e_AES_ss_twr_initiator/ss_aes_twr_initiator.c" />
+        </folder>
+        <folder Name="ex_06f_AES_ss_twr_responder">
+          <file file_name="../Src/examples/ex_06f_AES_ss_twr_responder/ss_aes_twr_responder.c" />
+        </folder>
+        <folder Name="ex_07c_ack_data_rx_dbl_buff">
+          <file file_name="../Src/examples/ex_07c_ack_data_rx_dbl_buff/ack_data_rx_dbl_buff.c" />
+        </folder>
+        <folder Name="ex_11a_spi_crc">
+          <file file_name="../Src/examples/ex_11a_spi_crc/spi_crc.c" />
+        </folder>
+        <folder Name="ex_14_otp_write">
+          <file file_name="../Src/examples/ex_14_otp_write/otp_write.c" />
+        </folder>
+        <folder Name="ex_15_le_pend">
+          <file file_name="../Src/examples/ex_15_le_pend/le_pend_rx.c" />
+          <file file_name="../Src/examples/ex_15_le_pend/le_pend_tx.c" />
+        </folder>
+      </folder>
+      <folder Name="MAC_802_15_4">
+        <file file_name="../Src/MAC_802_15_4/mac_802_15_4.c" />
+      </folder>
+      <folder Name="MAC_802_15_8">
+        <file file_name="../Src/MAC_802_15_8/mac_802_15_8.c" />
+      </folder>
+      <file file_name="../Src/config_options.c" />
+      <folder Name="SDK">
+        <folder Name="nRF_Libraries">
+          <file file_name="$(NordicSDKDir)/components/libraries/util/app_error_handler_gcc.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/util/app_error_weak.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/log/src/nrf_log_frontend.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/strerror/nrf_strerror.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/util/app_error.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/atomic/nrf_atomic.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/util/app_util_platform.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/memobj/nrf_memobj.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/balloc/nrf_balloc.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/util/nrf_assert.c" />
+          <file file_name="$(NordicSDKDir)/external/fprintf/nrf_fprintf.c" />
+          <file file_name="$(NordicSDKDir)/external/fprintf/nrf_fprintf_format.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/ringbuf/nrf_ringbuf.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/uart/retarget.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/uart/app_uart_fifo.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/fifo/app_fifo.c" />
+        </folder>
+        <folder Name="nRF_Common">
+          <file file_name="$(NordicSDKDir)/modules/nrfx/mdk/system_nrf52840.c" />
+          <file file_name="$(NordicSDKDir)/components/boards/boards.c" />
+        </folder>
+        <folder Name="nRF_Drivers">
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_spi.c" />
+          <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_spi.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/prs/nrfx_prs.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_spim.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_gpiote.c" />
+          <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_clock.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_clock.c" />
+          <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_uart.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/soc/nrfx_atomic.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uart.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uarte.c" />
+        </folder>
+        <folder Name="nRF_Log">
+          <file file_name="$(NordicSDKDir)/components/libraries/log/src/nrf_log_backend_rtt.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/log/src/nrf_log_backend_serial.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/log/src/nrf_log_backend_uart.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/log/src/nrf_log_default_backends.c" />
+          <file file_name="$(NordicSDKDir)/components/libraries/log/src/nrf_log_str_formatter.c" />
+        </folder>
+      </folder>
+    </folder>
+    <folder Name="System">
+      <file file_name="$(StudioDir)/source/thumb_crt0.s" />
+      <file file_name="$(NordicSDKDir)/modules/nrfx/mdk/ses_startup_nrf52840.s" />
+      <file file_name="$(NordicSDKDir)/modules/nrfx/mdk/ses_startup_nrf_common.s" />
+    </folder>
+    <configuration
+      Name="Debug"
+      debug_register_definition_file="$(NordicSDKDir)/modules/nrfx/mdk/nrf52840.svd" />
+  </project>
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="None" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="None"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="Level 1" />
+</solution>

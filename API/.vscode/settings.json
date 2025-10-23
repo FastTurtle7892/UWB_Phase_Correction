@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "example_selection.h": "c",
+        "shared_functions.h": "c"
+    }
+}
