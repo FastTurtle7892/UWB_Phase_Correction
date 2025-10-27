@@ -20,7 +20,7 @@
   
 ---
 
-## 2. 제안 방식 (Phase-Compensated DS-TWR)
+## 2. 제안 방식 (Enhanced DS-TWR)
 
 본 프로젝트는 다음과 같은 3단계 프로세스를 통해 고정밀 거리 측정을 구현합니다.
 
