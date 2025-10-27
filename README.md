@@ -39,15 +39,17 @@ $$
 $$
 
 > **[DS-TWR vs NEW DS-TWR 거리값 비교]**
->
-> <img width="1201" height="538" alt="image" src="https://github.com/user-attachments/assets/b6697ba5-b0b3-4c0e-ab38-031cb1340058" />
+
+ <div align="center" ><img width="70%" alt="image" src="https://github.com/user-attachments/assets/b6697ba5-b0b3-4c0e-ab38-031cb1340058" /></div>
 
 #### 3단계: 필터링을 통한 좌표 안정화
 보정된 거리값들을 LSM(Least Squares Method) 알고리즘에 적용하여 2D 좌표를 계산한 후, **Median 필터**와 **Kalman 필터**를 순차적으로 적용하여 최종 좌표의 노이즈와 지터를 제거하고 안정성을 확보합니다.
 
 > **[기존 DS-TWR vs NEW DS-TWR 좌표 비교]**
->
-> <img width="800" height="401" alt="image" src="https://github.com/user-attachments/assets/13706900-f04a-47fc-a95b-577981941ae6" />
+
+ <div align="center">
+  <img width="70%" alt="image" src="https://github.com/user-attachments/assets/13706900-f04a-47fc-a95b-577981941ae6" /> 
+  </div>
 
 
 
@@ -84,10 +86,10 @@ $$
 </div>
 
 #### 데이터 흐름
-다중 Anchor(4개)는 Tag와의 거리를 각각 측정한 후, 이 거리 정보를 ROS 토픽을 통해 중앙 처리 장치로 전송합니다. 중앙 처리 장치는 수집된 거리값들을 기반으로 Tag의 최종 좌표를 실시간으로 계산하고 시각화합니다.
+> 다중 Anchor(4개)는 Tag와의 거리를 각각 측정한 후, 이 거리 정보를 ROS 토픽을 통해 중앙 처리 장치로 전송합니다. 중앙 처리 장치는 수집된 거리값들을 기반으로 Tag의 최종 좌표를 실시간으로 계산하고 시각화합니다.
 
->
-> <img width="1032" height="691" alt="image" src="https://github.com/user-attachments/assets/f568a4da-809f-4c35-942a-1b0e504bc34e" />
+
+ <div align="center"><img width="70%"  alt="image" src="https://github.com/user-attachments/assets/f568a4da-809f-4c35-942a-1b0e504bc34e" /></div>
 
 
 ---
